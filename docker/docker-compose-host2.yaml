@@ -49,10 +49,10 @@ services:
         - ../organizations/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/:/var/hyperledger/orderer/tls
         - orderer1.example.com:/var/hyperledger/production/orderer
     extra_hosts:
-      - 'peer0.org1.example.com:10.0.0.251'
-      - 'peer1.org1.example.com:10.0.0.251'
-      - 'orderer.example.com:10.0.0.251'
-      - 'orderer2.example.com:10.0.0.251'
+      - 'peer0.org1.example.com:192.0.0.1'
+      - 'peer1.org1.example.com:192.0.0.1'
+      - 'orderer.example.com:192.0.0.1'
+      - 'orderer2.example.com:192.0.0.1'
     ports:
       - 8050:8050
       - 18050:18050
@@ -97,10 +97,10 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: peer node start
     extra_hosts:
-      - 'peer0.org1.example.com:10.0.0.251'
-      - 'peer1.org1.example.com:10.0.0.251'
-      - 'orderer.example.com:10.0.0.251'
-      - 'orderer2.example.com:10.0.0.251'
+      - 'peer0.org1.example.com:192.0.0.1'
+      - 'peer1.org1.example.com:192.0.0.1'
+      - 'orderer.example.com:192.0.0.1'
+      - 'orderer2.example.com:192.0.0.1'
     ports:
       - 9051:9051
       - 9544:9544
@@ -143,10 +143,10 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: peer node start
     extra_hosts:
-      - 'peer0.org1.example.com:10.0.0.251'
-      - 'peer1.org1.example.com:10.0.0.251'
-      - 'orderer.example.com:10.0.0.251'
-      - 'orderer2.example.com:10.0.0.251'
+      - 'peer0.org1.example.com:192.0.0.1'
+      - 'peer1.org1.example.com:192.0.0.1'
+      - 'orderer.example.com:192.0.0.1'
+      - 'orderer2.example.com:192.0.0.1'
     ports:
       - 19051:19051
       - 9644:9644
