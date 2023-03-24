@@ -10,7 +10,7 @@ docker exec -e CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fa
 
 docker exec cli peer lifecycle chaincode queryinstalled
 
-RESULT = $(docker exec cli peer lifecycle chaincode queryinstalled | grep 'smallbank' | cut -d ":" -f 2,3 | cut -d "," -f 1)
+RESULT=$(docker exec cli peer lifecycle chaincode queryinstalled | grep 'smallbank' | cut -d ":" -f 2,3 | cut -d "," -f 1)
 
 docker exec cli peer lifecycle chaincode approveformyorg --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem --channelID channel1 --name smallbank --version 1 --sequence 1 --waitForEvent --package-id $RESULT
 
